@@ -257,7 +257,7 @@ function lib_mount.attach(entity, player, is_passenger, passenger_number)
 	minetest.after(0.2, function()
 		player_api.set_animation(player, "sit", 30)
 	end)
-	player:set_look_horizontal(entity.object:get_yaw() + math.rad(entity.player_rotation.y or 90))
+	player:set_look_horizontal(entity.object:get_yaw() - math.rad(entity.player_rotation.y or 90))
 end
 
 function lib_mount.detach(player, offset)
